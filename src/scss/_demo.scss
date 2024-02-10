@@ -1,0 +1,213 @@
+// Demo styles: Quick and dirty
+// Not for CoBank production
+
+html {
+  scroll-behavior: smooth;
+}
+
+.sidebar {
+  --header-height: 4rem;
+  height: calc(100vh - var(--header-height, 60px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-margin-top: var(--header-height);
+  top: var(--header-height);
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+.navbar-brand {
+  img,
+  svg {
+    width: 8rem;
+  }
+}
+
+.list-group {
+  margin-left: -0.5rem;
+}
+
+.list-group-item-header {
+  font-weight: 550;
+}
+
+.list-group-item {
+  border: none;
+  
+  &.active {
+    background-color: #eee;
+    color: inherit;
+  }
+
+  [data-bs-theme=dark] & {
+   &:hover,
+   &:focus,
+   &.active {
+    color: var(--bs-body-bg);
+   }
+  }
+}
+
+.list-group-item-action {
+  font-size: 0.875rem;
+}
+
+.component-category {
+  & + & {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+
+  @media (width > 991px) {
+    & + & {
+      margin-top: 5rem;
+      padding-top: 3rem;
+    }
+  }
+}
+
+hr + .component-section {
+  @media (width > 991px) {
+    margin-top: 3rem;
+    padding-top: 0;
+  }
+}
+
+.component-section {
+  padding-top: 4rem;
+
+  & + & {
+    margin-top: 0rem;
+    padding-top: 4rem;
+  }
+
+  @media (width > 991px) {
+    padding-top: 0;
+
+    & + & {
+      margin-top: 2rem;
+      padding-top: 2rem;
+    }
+  }
+}
+
+.code-sample {
+  margin-top: 2rem;
+}
+
+.fs-7 {
+  font-size: 0.875rem;
+}
+
+.bd-mode-toggle {
+  .dropdown-toggle::after {
+    display: none;
+  }
+}
+
+article p {
+  max-width: 96ch;
+}
+
+.nav-links {
+  > * {
+    color: var(--bs-tertiary-color);
+    fill: var(--bs-tertiary-color);
+  }
+}
+
+.list-group-item-action:hover, .list-group-item-action:focus {
+  background-color: #f3f5f7;
+}
+
+.offcanvas {
+  --bs-offcanvas-width: 240px;
+}
+
+.bi {
+  width: 1em;
+  height: 1em;
+  vertical-align: -.125em;
+  fill: currentcolor;
+}
+
+.navbar .dropdown-menu .active .bi {
+  display: block !important;
+}
+
+.navbar .dropdown-menu .dropdown-item:active .bi {
+  color: inherit !important;
+}
+// Color Modes
+
+.navbar {
+  background-color: var(--bs-light);
+}
+
+
+[data-bs-theme="cobank"] {
+  // primatives
+  --cobank-primary-blue: #005288;
+
+  // overrides
+  --bs-blue: var(var(--cobank-primary-blue));
+
+  --bs-body-color: var(--bs-white);
+  --bs-body-color-rgb: #{to-rgb($white)};
+  --bs-body-bg: var(--cobank-primary-blue);
+  --bs-body-bg-rgb: #{to-rgb($blue)};
+  --bs-tertiary-bg: #{$blue-600};
+
+  .dropdown-menu {
+    --bs-dropdown-bg: #{mix($blue-500, $blue-600)};
+    --bs-dropdown-link-active-bg: #{$blue-700};
+  }
+
+  .btn-secondary {
+    --bs-btn-bg: #{mix($gray-600, $blue-400, .5)};
+    --bs-btn-border-color: #{rgba($white, .25)};
+    --bs-btn-hover-bg: #{darken(mix($gray-600, $blue-400, .5), 5%)};
+    --bs-btn-hover-border-color: #{rgba($white, .25)};
+    --bs-btn-active-bg: #{darken(mix($gray-600, $blue-400, .5), 10%)};
+    --bs-btn-active-border-color: #{rgba($white, .5)};
+    --bs-btn-focus-border-color: #{rgba($white, .5)};
+    --bs-btn-focus-box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .2);
+  }
+}
+
+$color-mode-type: data;
+
+@include color-mode(dark) {
+  .navbar {
+    color: var(--bs-primary-text-emphasis);
+    background-color: var(--bs-dark);
+  }
+}
+
+@include color-mode(light) {
+  .navbar {
+    background-color: var(--bs-light);
+  }
+}
+
+
+[data-bs-theme="dark"],
+[data-bs-theme="cobank"],
+.bg-dark, 
+.text-bg-dark {
+  .cobank-logo {
+    position: relative;
+    overflow: hidden;
+    height: 24px;
+    display: flex;
+    margin-top: 5px;
+    
+    img {
+      filter: grayscale(1) invert(1) brightness(1.75);
+      top: 8px !important;
+    }
+  }
+}
