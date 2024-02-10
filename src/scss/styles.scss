@@ -68,6 +68,8 @@
   --fs-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
   --fs-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
   --fs-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+  --font-poppins: "Poppins";
+  --font-dm-sans: "DM Sans";
 }
 
 .fs-sm {
@@ -98,6 +100,30 @@
   font-size: var(--fs-xxxl);
 }
 
+body {
+  font-family: var(--font-dm-sans, var(--bs-body-font-family));
+}
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1,
+.btn {
+  font-family: var(--font-poppins);
+}
+
+p {
+  max-width: 82ch;
+}
+
 .navbar-toggler,
 .nav-link,
 .navbar-nav .nav-link.active,
@@ -107,4 +133,8 @@
 
 .navbar-toggler .icon {
   font-size: var(--fs-lg, 2rem);
+}
+
+.btn-primary {
+  letter-spacing: 0.125em;
 }
