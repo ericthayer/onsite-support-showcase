@@ -152,7 +152,7 @@
           <a
             href="//drift.me/design44/meeting"
             class="d-none d-lg-flex btn btn-sm btn-primary py-2 px-3"
-            type="button"
+            target="_blank"
           >
             <span class="text-uppercase fw-semibold">Contact</span>
           </a>
@@ -413,8 +413,8 @@
           <div class="d-flex flex-column pt-3 pt-xl-5 pb-xl-3">
             <h2 class="h4 fs-md text-center my-0 px-1">Onboarding is as easy as 1 , 2 , 3!</h2>
           </div>
-          <div class="cards process-cards d-flex flex-column py-5 px-3 px-xl-2">
-            <div class="grid-container-md h-100 px-1 px-sm-4 px-md-0 px-lg-0">
+          <div class="cards process-cards d-flex flex-column py-5 px-3 px-xl-0">
+            <div class="grid-container-md h-100 px-1 px-sm-4 px-md-0 px-lg-2">
               <div class="row h-100 px-1 px-sm-4 px-md-0 px-lg-3">
                 <div class="col mx-auto py-4 px-2 py-lg-1 px-md-3 px-xl-4">
                   <div class="card bg-transparent text-light border-0 h-100 p-0 gap-4">
@@ -532,54 +532,58 @@
     </main>
     <footer
       id="appFooter"
-      class="app-footer text-bg-dark"
+      class="app-footer text-bg-dark py-lg-5"
       role="content-info"
     >
       <div class="container py-5 px-4">
-        <div class="grid-container-md">
+        <div class="grid-container-lg">
           <div class="row py-3 gap-5 gx-0">
-            <div class="col">
-              <div class="d-flex flex-column gap-4">
+            <div class="col col-lg-4">
+              <div class="d-flex flex-column align-items-center align-items-lg-start gap-4">
                 <img
                   src="/images/logo-onsite-short-white.svg"
                   alt=""
                   style="max-width: 10rem;"
                 />
-                <div class="fs-base h5 fw-semibold ps-1 pe-3">Reduce returns and create satisfied loyal customers</div>
-              </div>
-              <div class="d-flex flex-column">
+                <div class="fs-6 h5 lh-base ps-1 pe-lg-3 text-center text-lg-start col-xl-8">Reduce returns and create satisfied loyal customers</div>
               </div>
             </div>
-            <div class="col grid-container-sm">
-              <div class="row gap-4 gx-0">
-                <div class="col d-flex flex-column gap-3">
+            <div class="col col-lg-7 grid-container-sm">
+              <div class="row gap-5 gx-0">
+                <div class="col d-flex flex-column gap-1 gap-lg-3 text-center text-md-start">
                   <h3 class="h5 fs-md fw-semibold">Company</h3>
-                  <ul class="nav">
+                  <ul class="nav d-flex flex-column gap-3">
                     <li><a class="text-light" href="//onsitesupport.io/">About</a></li>
                     <li><a class="text-light" href="https://onsitesupport.io/features/">Features</a></li>
                     <li><a class="text-light" href="https://onsitesupport.io/faq/">FAQ</a></li>
                     <li><a class="text-light" href="https://onsitesupport.io/blog/">Blog</a></li>
                   </ul>
                 </div>
-                <div class="col d-flex flex-column gap-3">
+                <div class="col d-flex flex-column gap-1 gap-lg-3 text-center text-md-start">
                   <h3 class="h5 fs-md fw-semibold">Resources</h3>
-                  <ul class="nav">
+                  <ul class="nav d-flex flex-column gap-3">
                     <li><a class="text-light" href="https://support.onsitesupport.io/knowledge-base/articles/getting-started">Getting Started</a></li>
                     <li><a class="text-light" href="https://support.onsitesupport.io/knowledge-base/articles/TrainingVideos">Videos</a></li>
                     <li><a class="text-light" href="#design-templates">Templates</a></li>
                     <li><a class="text-light" href="https://support.onsitesupport.io/">Help Center</a></li>
                   </ul>
                 </div>
-                <div class="col d-flex flex-column gap-3">
+                <div class="col d-flex flex-column gap-1 gap-lg-3 text-center text-md-start">
                   <h3 class="h5 fs-md fw-semibold">Contact</h3>
-                  <ul class="nav">
+                  <ul class="nav d-flex flex-column gap-3">
                     <li><a class="text-light" href="https://drift.me/kelliewilson">Onboarding</a></li>
                     <li><a class="text-light" href="https://support.onsitesupport.io/knowledge-base/articles/TrainingVideos">Live Chat</a></li>
                     <li><a class="text-light" href="https://onsitesupport.io/contact-us/">Contact Us</a></li>
                   </ul>
                 </div>
-                <div class="col d-flex flex-column gap-3">
-                  <!-- https://drift.me/design44/meeting -->
+                <div class="col d-flex flex-column gap-3 mt-4 mx-auto w-50">
+                  <a
+                    href="//drift.me/design44/meeting"
+                    class="btn btn-sm btn-primary py-3 px-3"
+                    style="white-space: nowrap;"
+                  >
+                    <span class="text-uppercase fw-semibold">Schedule Meeting</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -587,6 +591,7 @@
         </div>
       </div>
     </footer>
+    <!-- Offcanvas Nav -->
     <div
       class="offcanvas offcanvas-end"
       tabindex="-1"
@@ -633,7 +638,6 @@
             <a
               href="//drift.me/design44/meeting"
               class="btn btn-primary w-100"
-              type="button"
               target="_blank"
               >Contact</a
             >
