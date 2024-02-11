@@ -206,11 +206,28 @@ body {
   position: relative;
   background: linear-gradient(45deg, #3b415b 0%, #504860 100%);
   overflow: hidden;
+  z-index: -1;
 
   .container {
     position: relative;
     z-index: 5;
   }
+}
+
+.wave-wrap {
+  mix-blend-mode: multiply;
+  position: absolute;
+  width: 100%;
+
+  &:not(.wave-wrap-bottom) {
+    top: 0;
+    transform: rotate(180deg);
+  }
+}
+
+.wave-wrap-bottom {
+  top: auto;
+  bottom: 0;
 }
 
  .wave {
@@ -226,7 +243,7 @@ body {
 }
 
 .wave-1 {
-  animation: wave 50s linear infinite;
+  animation: wave 50s alternate infinite;
   opacity: 1;
   animation-delay: 0s;
   height: 100px;
@@ -235,7 +252,7 @@ body {
 }
 
 .wave-2 {
-  animation: wave2 75s linear infinite;
+  animation: wave2 75s alternate infinite;
   z-index: 3;
   opacity: 0.5;
   animation-delay: -5s;
@@ -244,7 +261,7 @@ body {
 }
 
 .wave-3 {
-  animation: wave 60s linear infinite;
+  animation: wave 60s alternate infinite;
   z-index: 2;
   opacity: 0.2;
   animation-delay: -12s;
@@ -253,7 +270,7 @@ body {
 }
 
 .wave-4 {
-  animation: wave2 30s linear infinite;
+  animation: wave2 30s alternate infinite;
   z-index: 1;
   opacity: 0.5;
   animation-delay: -15s;
