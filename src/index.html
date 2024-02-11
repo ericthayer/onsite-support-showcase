@@ -174,7 +174,7 @@
       class="main-content h-100"
       role="main"
     >
-      <div class="hero text-bg-dark h-100 py-4 position-relative overflow-hidden">
+      <section class="hero text-bg-dark h-100 py-4 position-relative overflow-hidden">
         <div
           class="container banner banner-hero h-100 d-flex flex-column gap-4 py-xl-2 position-relative" style="z-index: 2;"
         >
@@ -195,15 +195,15 @@
           </div>
         </div>
         <div class="slider-thumb"></div>
-      </div>
+      </section>
       <!-- Design Templates -->
-      <div
+      <section
         id="design-templates"
         class="design-templates text-bg-light"
       >
         <div class="container py-5">
           <div class="d-flex flex-column pt-3 pt-xl-5 pb-xl-3">
-            <h2 class="h4 fs-lg text-center my-0">Design Templates</h2>
+            <h2 class="h4 fs-lg text-center my-0 px-1">Design Templates</h2>
           </div>
           <div class="cards d-flex flex-column py-5 px-xl-5">
             <div class="grid-container-sm h-100 px-xl-5">
@@ -400,9 +400,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- Process -->
-      <div id="process" class="text-bg-dark bg-wave">
+      <section id="process" class="text-bg-dark bg-wave">
         <div class="wave-wrap">
           <div class='wave wave-1'></div>
           <div class='wave wave-2'></div>
@@ -411,7 +411,7 @@
         </div>
         <div class="container py-5">
           <div class="d-flex flex-column pt-3 pt-xl-5 pb-xl-3">
-            <h2 class="h4 fs-md text-center my-0">Onboarding is as easy as 1 , 2 , 3!</h2>
+            <h2 class="h4 fs-md text-center my-0 px-1">Onboarding is as easy as 1 , 2 , 3!</h2>
           </div>
           <div class="cards process-cards d-flex flex-column py-5 px-3 px-xl-2">
             <div class="grid-container-md h-100 px-1 px-sm-4 px-md-0 px-lg-0">
@@ -528,13 +528,64 @@
           <div class='wave wave-3'></div>
           <div class='wave wave-4'></div>
         </div>
-      </div>
+      </section>
     </main>
     <footer
-      class="app-footer"
+      id="appFooter"
+      class="app-footer text-bg-dark"
       role="content-info"
     >
-      <div class="container"></div>
+      <div class="container py-5 px-4">
+        <div class="grid-container-md">
+          <div class="row py-3 gap-5 gx-0">
+            <div class="col">
+              <div class="d-flex flex-column gap-4">
+                <img
+                  src="/images/logo-onsite-short-white.svg"
+                  alt=""
+                  style="max-width: 10rem;"
+                />
+                <div class="fs-base h5 fw-semibold ps-1 pe-3">Reduce returns and create satisfied loyal customers</div>
+              </div>
+              <div class="d-flex flex-column">
+              </div>
+            </div>
+            <div class="col grid-container-sm">
+              <div class="row gap-4 gx-0">
+                <div class="col d-flex flex-column gap-3">
+                  <h3 class="h5 fs-md fw-semibold">Company</h3>
+                  <ul class="nav">
+                    <li><a class="text-light" href="//onsitesupport.io/">About</a></li>
+                    <li><a class="text-light" href="https://onsitesupport.io/features/">Features</a></li>
+                    <li><a class="text-light" href="https://onsitesupport.io/faq/">FAQ</a></li>
+                    <li><a class="text-light" href="https://onsitesupport.io/blog/">Blog</a></li>
+                  </ul>
+                </div>
+                <div class="col d-flex flex-column gap-3">
+                  <h3 class="h5 fs-md fw-semibold">Resources</h3>
+                  <ul class="nav">
+                    <li><a class="text-light" href="https://support.onsitesupport.io/knowledge-base/articles/getting-started">Getting Started</a></li>
+                    <li><a class="text-light" href="https://support.onsitesupport.io/knowledge-base/articles/TrainingVideos">Videos</a></li>
+                    <li><a class="text-light" href="#design-templates">Templates</a></li>
+                    <li><a class="text-light" href="https://support.onsitesupport.io/">Help Center</a></li>
+                  </ul>
+                </div>
+                <div class="col d-flex flex-column gap-3">
+                  <h3 class="h5 fs-md fw-semibold">Contact</h3>
+                  <ul class="nav">
+                    <li><a class="text-light" href="https://drift.me/kelliewilson">Onboarding</a></li>
+                    <li><a class="text-light" href="https://support.onsitesupport.io/knowledge-base/articles/TrainingVideos">Live Chat</a></li>
+                    <li><a class="text-light" href="https://onsitesupport.io/contact-us/">Contact Us</a></li>
+                  </ul>
+                </div>
+                <div class="col d-flex flex-column gap-3">
+                  <!-- https://drift.me/design44/meeting -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
     <div
       class="offcanvas offcanvas-end"
