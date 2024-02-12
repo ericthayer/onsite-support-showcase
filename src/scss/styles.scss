@@ -373,3 +373,17 @@ body {
     margin-top: -8.75rem;
   }
 }
+
+.lightbox {
+
+  .ratio {
+    overflow-y: scroll;
+  }
+
+  .img-fluid {
+    object-fit: cover;
+    object-position: top;
+    padding: 2rem;
+    width: 90% !important;
+  }
+}
