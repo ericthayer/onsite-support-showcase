@@ -100,6 +100,11 @@
   font-size: var(--fs-xxxl);
 }
 
+html,
+body {
+  scroll-padding-top: 60px;
+}
+
 body {
   font-family: var(--font-dm-sans, var(--bs-body-font-family));
 }
@@ -141,11 +146,6 @@ p {
   letter-spacing: 0.1em;
 }
 
-html,
-body {
-    scroll-padding-top: 65px;
-}
-
 .img-fluid {
   flex: 1;
 }
@@ -166,17 +166,17 @@ body {
   will-change: padding;
 }
 
-.navbar .container {
-  transition: max-width .3s ease;
-  will-change: max-width;
-}
-
 .navbar-brand img {
   transition: width .3s ease;
   will-change: width;
 }
 
 .navbar {
+
+  .container {
+    transition: max-width .3s ease;
+    will-change: max-width;
+  }
 
   .nav-link:hover, 
   .nav-link:focus {
@@ -215,6 +215,10 @@ body {
     .nav-link {
       font-size: 0.9rem;
     }
+  }
+
+  .navbar-brand {
+    margin-top: 0 !important;
   }
 
   .navbar-brand img, .navbar-brand svg {
