@@ -70,6 +70,7 @@
   --fs-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
   --font-poppins: "Poppins";
   --font-dm-sans: "DM Sans";
+  --bs-dark-rgb: 27, 27, 27;
 }
 
 .fs-sm {
@@ -107,6 +108,10 @@ body {
 
 body {
   font-family: var(--font-dm-sans, var(--bs-body-font-family));
+}
+
+.main-content {
+  overflow-x: hidden;
 }
 
 h6,
@@ -172,6 +177,8 @@ p {
 }
 
 .navbar {
+  background-color: rgba(17,5,21,1) !important;
+  color: var(--bs-light);
 
   .container {
     transition: max-width .3s ease;
@@ -362,6 +369,8 @@ p {
 }
 
 .hero {
+  background: rgb(57,13,73);
+  background: radial-gradient(circle, rgba(57,13,73,1) 0%, rgba(17,5,21,1) 30%);
 
   h1 {
     max-width: 15ch;
@@ -369,6 +378,9 @@ p {
 
   .img-fluid {
     filter: drop-shadow(0px 4px 30px rgba(0,0,0,0.4));
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
   }
   
   @media (width >= 1200px) {
@@ -380,19 +392,66 @@ p {
   }
 }
 
-
-.design-templates {
-  margin-top: -6rem;
-  padding-top: 3rem;
+.design-process {
+  background: linear-gradient(0deg, rgba(52,64,93,0) 58%, rgba(52,64,93,1) 80%) center top, url(https://static.onsitesupport.io/public/showcase/my-interface/bg-process.jpg) no-repeat center;
+  background-size: cover;
   position: relative;
   z-index: 1;
 
-  @media (width >= 576px) and (width <= 767.98px) {
-    margin-top: -8.75rem;
+  &:before {
+    background: url("https://assets.codepen.io/97621/border-top-purple.svg") no-repeat center top;
+    background-size: cover;
+    content: "";
+    height: 50px;
+    position: absolute;
+    top: -47px;
+    width: 100%;
+  }
+}
+
+
+.design-templates { 
+  margin-top: -7rem;
+  padding-top: 4rem;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    background: url("https://assets.codepen.io/97621/white-circle-border.svg") no-repeat center top;
+    background-size: cover;
+    content: "";
+    height: 90px;
+    position: absolute;
+    top: -4rem;
+    width: 100%;
+  }
+
+  @media (width >= 576px) {
+    // margin-top: -3.75rem;
+    // padding-top: 0;
+  }
+  
+  @media (width >= 992px) {
+    margin-top: -5.75rem;
+    padding-top: 1rem !important;
+
+    &:before {
+      transform: rotate(-2.5deg);
+      top: -6rem;
+      width: 150%;
+      transform-origin: center;
+      height: 120px;
+    }
   }
 
   @media (width >= 1200px) {
-    margin-top: -13.75rem;
+    margin-top: -9.75rem;
+    padding-top: 1rem !important;
+
+    &:before {
+      transform: rotate(0);
+      top: -4rem;
+    }
   }
 }
 
@@ -407,5 +466,20 @@ p {
     object-position: top;
     padding: 2rem;
     width: 90% !important;
+  }
+}
+
+.app-footer {
+  position: relative;
+  z-index: 2;
+
+  &:before {
+    background: url("https://assets.codepen.io/97621/border-top-black.svg") no-repeat center top;
+    background-size: cover;
+    content: "";
+    height: 50px;
+    position: absolute;
+    top: -47px;
+    width: 100%;
   }
 }
