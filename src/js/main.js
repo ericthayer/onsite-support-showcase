@@ -8,20 +8,20 @@ import * as bootstrap from "bootstrap"
 import "./bs-color-picker.js"
 
 // BS Lightbox
-import Lightbox from "bs5-lightbox"
+// import Lightbox from "bs5-lightbox"
 
-const options = {
-  keyboard: true,
-  size: "xl",
-}
+// const options = {
+//   keyboard: true,
+//   size: "xl",
+// }
 
-document.querySelectorAll(".lightbox-toggle").forEach((el) =>
-  el.addEventListener("click", (e) => {
-    e.preventDefault()
-    const lightbox = new Lightbox(el, options)
-    lightbox.show()
-  })
-)
+// document.querySelectorAll(".lightbox-toggle").forEach((el) =>
+//   el.addEventListener("click", (e) => {
+//     e.preventDefault()
+//     const lightbox = new Lightbox(el, options)
+//     lightbox.show()
+//   })
+// )
 
 // Sticky header event detection
 const el = document.querySelector("#appHeader")
